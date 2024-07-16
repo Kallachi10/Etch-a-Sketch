@@ -10,6 +10,7 @@ function handleSlide(event){
 function changeColor(node){
     node.target.style.backgroundColor="black";
     node.target.removeEventListener("mouseenter",changeColor);
+    node.target.removeEventListener("click",changeColor);
 }
 
 slider.addEventListener("input",handleSlide);
@@ -27,6 +28,7 @@ function setSketchPad(){
             const cell = document.createElement("div");
             cell.classList.add("cells");
             cell.addEventListener("mouseenter",changeColor);
+            cell.addEventListener("click",changeColor);
             row.appendChild(cell);
             
         }
